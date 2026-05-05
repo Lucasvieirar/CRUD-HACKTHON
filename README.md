@@ -1,4 +1,4 @@
-# CURD-HACKTHON
+# CRUD-HACKTHON
 
 Lucas vieira 
 João Lineky
