@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    <h1>{{ object.nome }}</h1>
+
+    <p><strong>Preço:</strong> R$ {{ object.preco }}</p>
+    <p><strong>Descrição:</strong> {{ object.descricao }}</p>
+
+    <a href="{% url 'produto_update' object.id %}">Editar</a>
+    <a href="{% url 'produto_delete' object.id %}">Excluir</a>
+    <br><br>
+    <a href="{% url 'produto_list' %}">Voltar</a>
+</body>
+</html>
