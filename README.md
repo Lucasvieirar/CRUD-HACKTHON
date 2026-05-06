@@ -1,8 +1,9 @@
-
+<div align="center">
 # 📝 CRUD-HACKTHON
 
 ![CRUD](recurso/Novo%20Projeto.jpg)
-## Descrição
+</div>
+
 
 CRUD-HACKTHON é um projeto Django que implementa operações CRUD (Create, Read, Update, Delete) para gerenciamento de produtos. O projeto utiliza **Django 6.0.5** e **Django REST Framework**, seguindo as melhores práticas de desenvolvimento web em Python.
 
@@ -14,42 +15,83 @@ CRUD-HACKTHON é um projeto Django que implementa operações CRUD (Create, Read
 - **Banco de Dados:** SQLite (padrão do Django)  
 - **Outras bibliotecas:** Gunicorn, Whitenoise, SQLParse, ASGIRef, Packaging
 
----
-
-- Python 3.x
-- Django 6.0.5
-- Django REST Framework 3.17.1
-- Gunicorn 26.0.0
-- Whitenoise 6.12.0
-- SQLParse 0.5.5
-- ASGIRef 3.11.1
-- Packaging 26.2
-
----
+      - Python 3.x
+      - Django 6.0.5
+      - Django REST Framework 3.17.1
+      - Gunicorn 26.0.0
+      - Whitenoise 6.12.0
+      - SQLParse 0.5.5
+      - ASGIRef 3.11.1
+      - Packaging 26.2
 
 
-# Instalação
+## Instalação
 
-## Configuração
 
-git clone https://github.com/Lucasvieirar/CRUD-HACKTHON
+```
+git clone https://github.com/Lucasvieirar/CRUD-HACKTHON.git
+```
+```
 cd CRUD-HACKTHON
-
+```
+```
 python -m venv venv
+```
+```
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
-
+```
+```
 pip install -r requirements.txt
-
+```
+```
 python manage.py migrate
+```
 
-## Execução
-
+Para Execução :
+```
 python manage.py runserver
+```
 
----
+
+## Funcionalidades
+
+
+   **Templates personalizados**  
+   - Cada view utiliza um template HTML próprio para exibição, edição e exclusão de produtos.
+
+   **Redirecionamento pós-ação**  
+   - Após criar, editar ou deletar um produto, o usuário é redirecionado automaticamente para a lista de produtos.
+
+### Produtos
+1. **Listar produtos**  
+   - Exibe uma lista de todos os produtos cadastrados no sistema.
+   - Informações exibidas: nome, preço, descrição (dependendo do template).
+
+2. **Visualizar detalhes do produto**  
+   - Exibe informações detalhadas de um produto específico.
+   - URL: `/<id>/`
+
+3. **Criar novo produto**  
+   - Permite adicionar um novo produto ao sistema.
+   - Campos obrigatórios: `nome`, `preco`, `descrição`
+   - URL: `/novo/`
+
+4. **Editar produto existente**  
+   - Permite atualizar os dados de um produto já cadastrado.
+   - Campos editáveis: `nome`, `preco`, `descricao`
+   - URL: `/<id>/editar/`
+
+5. **Deletar produto**  
+   - Permite remover um produto do sistema.
+   - Confirmação de exclusão antes de remover.
+   - URL: `/<id>/deletar/`
+
 
 ## Estrutura
+
+Aplicativo separado (`produtos`)  
+Configuração centralizada (`core`) 
 
 ```plaintext
 CRUD-HACKTHON/
@@ -76,50 +118,8 @@ CRUD-HACKTHON/
 └── requirements.txt     # Dependências do projeto
 
 ```
-
-
-
-
-## Funcionalidades
-
-### Produtos
-1. **Listar produtos**  
-   - Exibe uma lista de todos os produtos cadastrados no sistema.
-   - Informações exibidas: nome, preço, descrição (dependendo do template).
-
-2. **Visualizar detalhes do produto**  
-   - Exibe informações detalhadas de um produto específico.
-   - URL: `/<id>/`
-
-3. **Criar novo produto**  
-   - Permite adicionar um novo produto ao sistema.
-   - Campos obrigatórios: `nome`, `preco`, `descrição`
-   - URL: `/novo/`
-
-4. **Editar produto existente**  
-   - Permite atualizar os dados de um produto já cadastrado.
-   - Campos editáveis: `nome`, `preco`, `descricao`
-   - URL: `/<id>/editar/`
-
-5. **Deletar produto**  
-   - Permite remover um produto do sistema.
-   - Confirmação de exclusão antes de remover.
-   - URL: `/<id>/deletar/`
-
-### Funcionalidades gerais do projeto
- . **Templates personalizados**  
-   - Cada view utiliza um template HTML próprio para exibição, edição e exclusão de produtos.
-
- . **Redirecionamento pós-ação**  
-   - Após criar, editar ou deletar um produto, o usuário é redirecionado automaticamente para a lista de produtos.
-
- . **Estrutura organizada**  
-   - Aplicativo separado (`produtos`)  
-   - Configuração centralizada (`core`)  
-   - Uso de Class-Based Views (CBVs) para simplificar manutenção e reutilização de código.
-
 # Integrantes
-Fernando Chaves </br>
-João Lineky </br>
-Lucas vieira </br>
-Yuri Styven </br>
+> Fernando Chaves </br>
+> João Lineky </br>
+> Lucas vieira </br>
+> Yuri Styven </br>
