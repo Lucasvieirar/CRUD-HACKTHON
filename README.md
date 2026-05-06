@@ -1,7 +1,7 @@
 
 # 📝 CRUD-HACKTHON
 
-![Texto alternativo(recurso/Novo Projeto.jpg)]
+![CRUD](recurso/Novo Projeto.jpg)
 
 ## Descrição
 
